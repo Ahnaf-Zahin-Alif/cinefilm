@@ -1,0 +1,36 @@
+{% extends 'movies/base.html' %}
+
+{% block content %}
+<!-- Movie Banner Container -->
+<div style="background-color: #1a0f14; border-radius: 16px; padding: 60px 40px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); position: relative; overflow: hidden; min-height: 400px; display: flex; flex-direction: column; justify-content: center;">
+    
+    <!-- We will add the actual image background via CSS here later -->
+    
+    <div style="position: relative; z-index: 2;">
+        <p style="letter-spacing: 3px; color: #e0e0e0; font-weight: bold; font-size: 0.9rem; margin-bottom: 5px;">
+            A FILM BY CHRISTOPHER NOLAN
+        </p>
+        
+        <h1 style="color: #9c3f3a; font-size: 4.5rem; margin: 0; letter-spacing: 6px; font-family: serif; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+            THE ODYSSEY
+        </h1>
+        
+        <h2 style="color: #9c3f3a; font-size: 1.8rem; letter-spacing: 3px; margin-top: 5px; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">
+            07.17.26
+        </h2>
+        
+        <p style="margin-top: 25px; color: #e0e0e0; letter-spacing: 1px; font-size: 0.8rem;">
+            SHOT ENTIRELY WITH <strong style="color: white;">IMAX</strong> FILM CAMERAS
+        </p>
+        
+        <!-- Decorative timeline dashes -->
+        <div style="margin-top: 40px; display: flex; justify-content: center; gap: 10px;">
+            <div style="height: 4px; width: 30px; background: #d4af37; border-radius: 2px;"></div>
+            <div style="height: 4px; width: 30px; background: rgba(212, 175, 55, 0.3); border-radius: 2px;"></div>
+            <div style="height: 4px; width: 30px; background: rgba(212, 175, 55, 0.3); border-radius: 2px;"></div>
+            <div style="height: 4px; width: 30px; background: rgba(212, 175, 55, 0.3); border-radius: 2px;"></div>
+        </div>
+    </div>
+    
+</div>
+{% endblock content %}

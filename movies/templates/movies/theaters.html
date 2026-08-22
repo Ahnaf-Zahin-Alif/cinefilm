@@ -1,0 +1,36 @@
+{% extends 'movies/base.html' %}
+
+{% block content %}
+<div style="display: flex; flex-direction: column; align-items: center; margin-top: 40px;">
+    
+    <!-- Title -->
+    <div style="background-color: #e0e0e0; border: 2px solid #333; border-radius: 20px; padding: 15px 50px; margin-bottom: 50px; box-shadow: 4px 4px 0px rgba(0,0,0,0.3);">
+        <h2 style="margin: 0; color: #1a1438; font-family: serif; letter-spacing: 1px;">SELECT YOUR THEATRE</h2>
+    </div>
+    
+    <!-- Theatre List -->
+    <div style="display: flex; flex-direction: column; gap: 25px; width: 100%; max-width: 600px;">
+        
+        <div style="background-color: #f5f5f5; color: #1a1438; padding: 20px 25px; border-radius: 30px; display: flex; align-items: center; font-size: 1.2rem; font-weight: bold; border: 2px solid #333; box-shadow: 4px 4px 0px rgba(0,0,0,0.3); cursor: pointer;">
+            <span style="color: red; font-size: 1.5rem; margin-right: 20px;">&#128205;</span>
+            Bashundhara Shopping Mall , Panthapath
+        </div>
+        
+        <div style="background-color: #f5f5f5; color: #1a1438; padding: 20px 25px; border-radius: 30px; display: flex; align-items: center; font-size: 1.2rem; font-weight: bold; border: 2px solid #333; box-shadow: 4px 4px 0px rgba(0,0,0,0.3); cursor: pointer;">
+            <span style="color: red; font-size: 1.5rem; margin-right: 20px;">&#128205;</span>
+            Sony Square , Mirpur
+        </div>
+        
+        <div style="background-color: #f5f5f5; color: #1a1438; padding: 20px 25px; border-radius: 30px; display: flex; align-items: center; font-size: 1.2rem; font-weight: bold; border: 2px solid #333; box-shadow: 4px 4px 0px rgba(0,0,0,0.3); cursor: pointer;">
+            <span style="color: red; font-size: 1.5rem; margin-right: 20px;">&#128205;</span>
+            Bali Arcade , Chattogram
+        </div>
+        
+        <div style="background-color: #f5f5f5; color: #1a1438; padding: 20px 25px; border-radius: 30px; display: flex; align-items: center; font-size: 1.2rem; font-weight: bold; border: 2px solid #333; box-shadow: 4px 4px 0px rgba(0,0,0,0.3); cursor: pointer;">
+            <span style="color: red; font-size: 1.5rem; margin-right: 20px;">&#128205;</span>
+            Finlay Square , Chattogram
+        </div>
+
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,25 @@
+{% extends 'movies/base.html' %}
+
+{% block content %}
+<div style="display: flex; gap: 50px; margin-top: 40px; justify-content: center;">
+    
+    <!-- Poster Placeholder -->
+    <div style="width: 320px; height: 480px; background: #333; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.6);">
+        <span style="color: #777;">Spider-Man Poster</span>
+    </div>
+    
+    <!-- Movie Details -->
+    <div style="max-width: 600px;">
+        <h2 class="gold-text" style="font-size: 2.5rem; margin-top: 0;">Spider-Man: Brand New Day (2D)</h2>
+        
+        <div style="font-size: 1.2rem; line-height: 2.2; margin-top: 30px;">
+            <p><strong class="gold-text">Category:</strong> 2D</p>
+            <p><strong class="gold-text">Actor:</strong> TOM HOLLAND, ZENDAYA, SADIE SINK, LIZA COLÓN, JACOB BA</p>
+            <p><strong class="gold-text">Genre:</strong> Action, Adventure, Sci-Fi</p>
+            <p><strong class="gold-text">Release:</strong> 30-07-2026</p>
+            <p><strong class="gold-text">Language:</strong> English</p>
+        </div>
+    </div>
+
+</div>
+{% endblock content %}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cinefilm</title>
+    <style>
+        /* Global Theme */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0514 0%, #1a1438 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .gold-text { color: #d4af37; }
+
+        /* Top Header */
+        .top-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            border-bottom: 2px solid #333; /* subtle line */
+        }
+
+        /* Search Bar */
+        .search-container {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            width: 250px;
+        }
+        .search-btn {
+            background: #d4af37;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        .search-input {
+            border: none;
+            outline: none;
+            padding: 8px 10px;
+            width: 100%;
+        }
+
+        /* Two-Column Layout */
+        .layout-wrapper {
+            display: flex;
+            flex: 1; /* Takes up remaining height */
+        }
+
+        /* Left Sidebar */
+        .sidebar {
+            width: 220px;
+            padding: 40px 0 40px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-right: 2px solid #d4af37; /* The vertical gold line */
+        }
+
+        .menu-icon {
+            font-size: 2rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+            cursor: pointer;
+            background: rgba(212, 175, 55, 0.2);
+            width: fit-content;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .sidebar a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 12px 20px;
+            background: rgba(212, 175, 55, 0.15); /* Dark gold background box */
+            margin-right: -2px; /* Pulls the box to touch the vertical line */
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+        .sidebar a:hover {
+            background: rgba(212, 175, 55, 0.3);
+        }
+
+        /* Right Content Area */
+        .main-content {
+            flex: 1;
+            padding: 20px 50px;
+            position: relative;
+        }
+
+        /* Location Pill */
+        .location-pill {
+            text-align: right;
+            margin-bottom: 30px;
+        }
+        .location-pill span {
+            display: inline-flex;
+            align-items: center;
+            background: #fff;
+            padding: 5px 20px;
+            border-radius: 20px;
+            color: #333;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Header -->
+    <header class="top-header">
+        <h1 class="gold-text" style="margin: 0; font-family: serif; letter-spacing: 2px;">
+            <span style="border-bottom: 2px solid #d4af37;">CINEFILM</span>
+        </h1>
+        <div class="search-container">
+            <button class="search-btn">&#128269;</button>
+            <input type="text" class="search-input" placeholder="Search movies...">
+        </div>
+    </header>
+
+    <!-- Content Split -->
+    <div class="layout-wrapper">
+        
+        <!-- Sidebar Menu -->
+        <aside class="sidebar">
+            <div class="menu-icon">&#9776;</div>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'now_showing' %}">Ticket Price</a>
+            <a href="{% url 'theatres' %}">About Us</a>
+            <a href="{% url 'login' %}">Contact</a>
+        </aside>
+
+        <!-- Dynamic Content -->
+        <main class="main-content">
+            <!-- Location Pin (Visible on all pages) -->
+            <div class="location-pill">
+                <span><strong style="color: red; margin-right: 8px; font-size: 1.2rem;">&#128205;</strong> Location</span>
+            </div>
+
+            <!-- Individual pages load here -->
+            {% block content %}{% endblock content %}
+        </main>
+        
+    </div>
+
+    <footer>
+        <p style="margin-bottom: 5px;">&copy; 2026 Cinefilm Project Team</p>
+        <p style="font-size: 0.85rem; margin-top: 0; line-height: 1.5;">
+            Md. Ahnaf Zahin Alif - 25549011071 <br>
+            Sabiha Tanzum Munira - 25549011001 <br>
+            Zarif Fahad - 25549011049
+        </p>
+    </footer>
+
+</body>
+</html>
